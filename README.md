@@ -1,4 +1,4 @@
-#简介
+#简介 
 
 professional-class
 
@@ -45,6 +45,6 @@ professional-class
 
 欢迎更多同学的加入。
 
-##打发广告
+##打发广告 
 [wz's blog](http://blog.csdn.net/qq_33230935)
 wz是这个仓库的创始人之一，将自己非常简陋的课堂笔记传到了这个blog上
