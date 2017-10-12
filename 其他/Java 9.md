@@ -1,10 +1,12 @@
-﻿#hat's new in Java 9
+# What's new in Java 9
+
+没有博客所以只能发到空间了
 
 Java 9疯狂跳票之后终于在2017.9.24出了，因为引入了源于Jigsaw的模块化系统，这个版本可谓是一次伤筋动骨的调整。不过除了模块化还有哪些改变呢？不妨一起来看一看
 
 源网页在<http://openjdk.java.net/projects/jdk9/>。按JEP的顺序简单提炼了下每一条中的信息，附带一点个人观点。
 
-####JEP 102: 进程API升级
+#### JEP 102: 进程API升级
 
 * `java.lang.Process`和`java.lang.ProcessHandle`类
 * 支持所有进程相关的操作，开始、终止、查看PID、获取父子进程等等。
@@ -67,7 +69,7 @@ Java 9疯狂跳票之后终于在2017.9.24出了，因为引入了源于Jigsaw�
 
 #### JEP 200: 模块化JDK
 
-* 锵锵，总所周知的模块化，这个JEP是针对模块化JDK的，关于模块化的内容在多个JEP中，请往下看
+* 模块化之一(下一个是JEP 201)。定义了JDK模块化的结构。
 
 
 * 由JCP管理的标准模块以`java.`开头
@@ -97,7 +99,7 @@ Java 9疯狂跳票之后终于在2017.9.24出了，因为引入了源于Jigsaw�
 
 #### JEP 201: 模块化JDK代码
 
-* 把JDK代码模块化，便于编译
+* 模块化之二(下一个是JEP 200)。把JDK代码模块化，便于编译
 * _没我们啥事儿_
 
 #### JEP 211: 去除了import带来的的deprecation警告
@@ -112,12 +114,139 @@ Java 9疯狂跳票之后终于在2017.9.24出了，因为引入了源于Jigsaw�
 
 #### JEP 213: Project Coin的改进
 
-* Project Coin就是JDK 7的那一系列改进的统称，这个JEP是对这些改进的进一步优化
+* Project Coin就是JDK 7的那一系列改进的统称，这个JEP是对这些改进的进一步优化。这也是Java 9语法层面的改变。
 * `@SafeVarargs`允许用在私有实例方法上了
 * 允许在`try-with-resource`的初始化部分是用effectivly-final的变量了，意思就是不在需要直接在try(...)里面直接new出来Closeable，可以拿个effectively-final的变量放进去了（这个提案在Project Coin提出时已经来不及加进标准里了，所以现在才加（所以为什么不在Java 8加呢，非要等同一个JEP的其他部分全部完成才行吗））
 * 可以把可表示的匿名类放在<>里面了。我一时想不到可表示的匿名类是什么样的，等我想到了更一下这边……
 * 下划线不再是合法的变量名了！
-* 私有非abstract接口方法！让你不用把一堆代码全都塞到default方法里。最直接的，实现模板模式可以直接用一个接口完成了
+* 私有非abstract接口方法！让你不用把一堆代码全都塞到default方法里。接口和抽象类越来越像了
+* _就这么多，是不是觉得很没诚意_
 
+
+
+
+#### JEP 214: 移除一些过期的GC方式组合
+
+* ```
+  DefNew + CMS       : -XX:-UseParNewGC -XX:+UseConcMarkSweepGC
+  ParNew + SerialOld : -XX:+UseParNewGC
+  ParNew + iCMS      : -Xincgc
+  ParNew + iCMS      : -XX:+CMSIncrementalMode -XX:+UseConcMarkSweepGC
+  DefNew + iCMS      : -XX:+CMSIncrementalMode -XX:+UseConcMarkSweepGC -XX:-UseParNewGC
+  CMS foreground     : -XX:+UseCMSCompactAtFullCollection
+  CMS foreground     : -XX:+CMSFullGCsBeforeCompaction
+  CMS foreground     : -XX:+UseCMSCollectionPassing
+  ```
+
+  上面这些GC方式被移除了
+
+* _CMS过气啦！_
+
+
+
+#### JEP 215: javac的层叠属性(Tired Attribution for javac)
+
+* 编译相关，新的类型推导方式，用于确定调用方法的哪一个重载版本
+* _超出知识范围了，不明觉厉……_
+
+
+
+#### JEP 216: 正确处理import 语句
+
+* 修复了特定的import顺序导致不能通过编译的问题
+* _这……这怎么是个JEP，不是issue吗_
+
+
+
+#### JEP 217: 注解管道2.0
+
+* 重新设计javac里的注解处理，可以把注解加在更多奇怪的地方了，比如
+
+  ```java
+  Function<String, String> fss = (@Anno @Anno String s) -> s;
+  ```
+
+* javadoc中的注解也有升级，不过是在另一个地方
+
+* _可以有更多骚操作了_
+
+
+
+#### JEP 219: DTLS
+
+* 实现了数据包传输层安全(Datagram Transport Layer Security)，就是UDP的TLS
+* 然后提供了一些API，具体请参见官方文档
+* _挺好_
+
+
+
+#### JEP 220: 运行时模块映像 
+
+* 模块化之三(下一个是JEP 261)。
+
+* 旧的映像结构（其实就是JRE和JDK的目录结构）自己去复习。新的映像结构中，JDK简单的在JRE的结构的基础上加了一些开发工具，运行时映像的部分将完全相同——而不是像以前一样JDK把JRE包含在内。具体的结构如下:
+
+  * bin: 由这个映像所链接的所有模块（还记得模块化的JDK代码吗，JEP 201）所定义的命令行launcher
+
+  * conf: 包含了.properties，.policy和其他将会由开发者，部署者或者用户修改的配置参数
+
+  * lib: 运行时所需要的动态链接库。除了少量的供外界使用的文件，其他文件将被视为是私有的（更改不会被通知）
+
+  * legal: license和版权信息，按照模块组织
+
+  * 完整的JDK还有demo，man，include等目录，但是samples没了（JEP 298，_这也要搞个JEP出来……_）
+
+  * endorsed-standards override机制被移除！将会由可升级模块(upgradeable modules)来替代。
+
+  * 拓展(extension)机制被移除。但是拓展类加载器被保留了，不过改名叫平台类加载器(platform class loader)
+
+  * **重磅: rt.jar和tools.jar被移除了！**原来的被包含在这两个里面的类被移到lib里。同时这带来了一些问题：
+
+    * 我们都知道原来`ClassLoader::getSystemResource`原来返回的是像这样的URI`jar:file:/usr/local/jdk8/jre/lib/rt.jar!/java/lang/Class.class`，然后你需要用`getContent`来读取这个jar里的资源。而现在由于引入了模块化，现在返回的是以jrt为scheme的URL，举个栗子:
+
+      `ClassLoader.getSystemResource("java/lang/Class.class")`
+
+      返回:
+
+      `java.net.URL: jrt:/java.base/java/lang/Class.class`
+
+    * 和上一条原因一样，原来的依赖于URL的`java.security.CodeSource`和安全策略文件，比如`file:${java.home}/lib/ext/sunec.jar`当然也不再合法了。
+
+    * IDE和其他要直接打开rt.jar等来枚举类和资源文件的开发工具，现在当然也用不了啦
+
+  * 用来解决上面一条的问题的，新的URI scheme，jrt，格式是`jrt:/[$MODULE[/$PATH]]`：
+
+    * `jrt:/`表示所有包含在当前运行时映像中的类和资源文件
+    * `jrt:/$MODULE`表示所有包含在这个模块中的类和资源文件
+    * `jrt:/$MODULE/$PATH`表示某个特定的类或资源文件
+
+    ​
+
+    * `ClassLoader::getSystemResource`返回jrt的URL，如上面的例子所示
+
+    * `java.security.CodeSource` API当然也一样啦
+
+    * 对jrt scheme的URL提供了NIO FileSystem provider来实现枚举的目的。示例：
+
+      ```java
+      FileSystem fs = FileSystems.getFileSystem(URI.create("jrt:/"));
+      byte[] jlo = Files.readAllBytes(fs.getPath("modules", "java.base", "java/lang/Object.class"));
+      ```
+
+      在这个文件系统中，顶级的modules目录中每个模块有一个目录，顶级的packages目录中每个包有一个子目录，这个子目录中包含了一个符号链接，指向定义了这个包的模块在modules下对应的子目录。
+
+      另外，对于要在JDK 8上运行但是目标是支持JDK 9开发的工具，在lib目录下放了个在JDK 8下使用的jrt-fs.jar。_真贴心啊_
+
+  * 当然了，构建系统也变化了。值得一提的是我们没放过这个机会，终于把`images/j2sdk-image`和`images/j2re-image`目录改名叫`images/jdk`和`images/jre`了。_感觉这背后一把辛酸泪_。
+
+  * 标准上的一点微小的变化。有些需要在lib目录里查找配置文件的标准规格声明被删去了，因为这些文件现在放到conf目录了嘛。这项工作在JDK 8中由JEP 162已经完成了一部分了，去除了仅属于Java SE的一些类库，而现在一些SE和EE共有的也被完成了调整，包括
+
+    `javax.xml.stream.XMLInputFactory`
+
+    `javax.xml.ws.spi.Provider`
+
+    `javax.xml.soap.MessageFactory`
+
+* _这大概将是不兼容性的最大来源，也就是迁移至JDK 9的最大阻力了。但是这本身是件好事，映像结构变得更加清晰明了，资源的访问方式也会更优雅一些_
 
 未完待续，看心情更
