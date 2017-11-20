@@ -30,7 +30,7 @@ professional-class
 2. 将本仓库clone到本地。在希望保存本仓库的地方，输入
 
    ```
-   git clone https://github.com/NJU-SE-15-share-review/professional-class.git
+   git lfs clone https://github.com/NJU-SE-15-share-review/professional-class.git
    ```
 
 其他用法1：
