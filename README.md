@@ -24,8 +24,7 @@ professional-class
    ```
    git lfs install
    ```
-
-   ​
+   **(若使用 macOS，使用 brew 安装 ： ``` brew install git-lfs ```,  之后的 ```git lfs``` 使用 ```git-lfs```代替)**
 
 2. 将本仓库clone到本地。在希望保存本仓库的地方，输入
 
