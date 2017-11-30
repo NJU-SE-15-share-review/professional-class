@@ -1,7 +1,12 @@
-# 紧急通知
+# 通知
 
-如果只是想要用资料的同学可以直接download，反正下载起来很快的。可以考虑不用git clone的方法。
-LFS新开通了一个月。。。感觉自己又变穷了。。。如果下个月不能使用，记得提醒某Owner开通一下服务
+**构造课资料已打包至release**
+
+欢迎加入专业课资料分享，群号码：671139455
+
+加群暗号：“我要专业课资料”（去除引号）
+
+![Markdown](http://i1.cfimg.com/615757/9b21f62e4c3b2355.jpg)
 
 ---
 
@@ -25,7 +30,7 @@ professional-class
    ```
    git lfs install
    ```
-   **(若使用 macOS，使用 brew 安装 ： ``` brew install git-lfs ```,  之后的 ```git lfs``` 使用 ```git-lfs```代替)**
+      **(若使用 macOS，使用 brew 安装 ： ``` brew install git-lfs ```,  之后的 ```git lfs``` 使用 ```git-lfs```代替)**
 
 2. 将本仓库clone到本地。在希望保存本仓库的地方，输入
 
