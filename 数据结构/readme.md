@@ -4,9 +4,7 @@
 
 ### 因为没时间布一个page+Mathjax页面了，所以强烈推荐大家安装这个chrome插件，安装即可浏览所有的LaTex公式：
 
-[GitHub with MathJax]: https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima	"GitHub with MathJax"
-
-
+https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima
 
 参考课件发到了百度云盘上，需要者自行下载。
 
