@@ -197,13 +197,7 @@ private BinaryNode remove( Comparable x, BinaryNode t )
 
 树的高度就是层数，包含根和叶。
 
-平均下来的话，对于有n个数据的二叉搜索树，高度是
-
-$$\lfloor \log{2}n \rfloor+1$$
-
-也就是说，相关时间复杂度是
-
-$$ O(\log_2 n)$$
+平均下来的话，对于有n个数据的二叉搜索树，高度是$\lfloor \log{2}n \rfloor+1$,也就是说，相关时间复杂度是$ O(\log_2 n)$
 
 
 
@@ -219,9 +213,7 @@ EOF
 
 每一个节点满足如下关系：
 
-$$ \forall node, \left| h_L-h_R\right| \leq1,$$
-
-where $$h_R $$ and $$h_L$$ are the heights of $$T_L$$(left subtree)and $$T_R$$(right subtree)respectively
+$ \forall node, \left| h_L-h_R\right| \leq1,​$where $h_R ​$ and ​$h_L​$ are the heights of ​$T_L​$(left subtree)and ​$T_R​$(right subtree)respectively
 
 树的高度：从根到叶最长的一条路
 
@@ -233,7 +225,7 @@ balance factor：bf(x)右子树高度减去左子树高度
 
 left，data，right，balance
 
-算法复杂度：$$O(\log_2 n)$$
+算法复杂度：$O(\log_2 n)$
 
 ** **
 
@@ -252,7 +244,7 @@ AVL树的插入一直是一个难点。笔者认为可以这么想：
 | 左    | 左单旋转 | 左双旋转 |
 | 右    | 右单旋转 | 右双旋转 |
 
-基本算法：插入时向上回溯，检查左右子树的高度差，如果高度差>1，那么开始调整。此时我们将左右子树高度差大于一的节点，称为$$Node_\alpha$$,这个节点的
+基本算法：插入时向上回溯，检查左右子树的高度差，如果高度差>1，那么开始调整。此时我们将左右子树高度差大于一的节点，称为$Node_\alpha$,这个节点的
 
 调整分为两种情况：
 
@@ -260,13 +252,13 @@ AVL树的插入一直是一个难点。笔者认为可以这么想：
 
   单旋转
 
-  $$Node_\alpha$$的外节点$$Node_\beta$$替换$$Node_\alpha$$的位置（划重点！不是整个替换，$$Node_\alpha$$是要顺延往后的），重新构建树。重新构建树的过程可以看作是直接把$$Node_\beta$$的内侧子树加到$$Node_\alpha$$的内节点来。$$Node_\beta$$外侧的节点就跟着$$Node_\beta$$。
+  $Node_\alpha$的外节点$Node_\beta$替换$Node_\alpha$的位置（划重点！不是整个替换，$Node_\alpha$是要顺延往后的），重新构建树。重新构建树的过程可以看作是直接把$Node_\beta$的内侧子树加到$Node_\alpha$的内节点来。$Node_\beta$外侧的节点就跟着$Node_\beta$。
 
-  可以这么理解：替换就是把$$Node_\beta$$拎起来到$$Node_\alpha$$的位置.
+  可以这么理解：替换就是把$Node_\beta$拎起来到$Node_\alpha$的位置.
 
   * 右子树外侧变高：
 
-    **左单旋转：$$Node_\alpha$$的右节点$$Node_\beta$$替换$$Node_\alpha$$，重新构建树。由于二叉搜索树的特性，调整之后，$$Node_\alpha$$成为$$Node_\beta$$的左子树，那么$$Node_\alpha$$就没有右子树了。重建树的时候，总是把$$Node_\beta$$的左子树加到$$Node_\alpha$$的右节点，于是我们可以看作是直接把右节点左子树加到右节点来。$$Node_\beta$$外侧的节点就跟着$$Node_\beta$$。**
+    **左单旋转：$Node_\alpha$的右节点$Node_\beta$替换$Node_\alpha$，重新构建树。由于二叉搜索树的特性，调整之后，$Node_\alpha$成为$Node_\beta$的左子树，那么$Node_\alpha$就没有右子树了。重建树的时候，总是把$Node_\beta$的左子树加到$Node_\alpha$的右节点，于是我们可以看作是直接把右节点左子树加到右节点来。$Node_\beta$外侧的节点就跟着$Node_\beta$。**
 
     这个可以自己体会一下。
 
@@ -278,7 +270,7 @@ AVL树的插入一直是一个难点。笔者认为可以这么想：
 
 * 内侧变高：
 
-  双旋转：先对$$Node_\beta$$做一次反向的单旋转，再对$$Node_\alpha$$做一次正向的单旋转，是为双旋转。
+  双旋转：先对$Node_\beta$做一次反向的单旋转，再对$Node_\alpha$做一次正向的单旋转，是为双旋转。
 
   反向什么意思，啊懂？外侧变成内侧，~~好好体会一下~~
 
