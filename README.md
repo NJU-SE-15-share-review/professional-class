@@ -59,3 +59,21 @@ professional-class
 ## 打发广告 
 [wz's blog](http://blog.csdn.net/qq_33230935)
 wz是这个仓库的创始人之一，将自己非常简陋的课堂笔记传到了这个blog上
+
+
+## 说明
+部分笔记使用Markdown编写，并使用Mathjax与Mermaid渲染公式与图表。
+建议大家安装相关的chrome插件，安装即可浏览所有的LaTex公式：
+
+- Github with Mathjax
+  https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima
+  just one click
+- Mermaid安装方法:
+  - Clone repo:https://github.com/payfriendz/mermaid-chrome-extension
+  - Go to manage Chrome Extentions: chrome://extensions/
+  - Tick to enable Developer mode
+  - Load unpacked extension
+
+- Select the repo folder
+
+谢谢！

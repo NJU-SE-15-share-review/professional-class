@@ -1,10 +1,22 @@
-## 注意！注意！github不支持LaTeX渲染！
+## 注意！注意！本笔记使用Mathjax与Mermaid渲染公式与图表。
 
 ---
 
-### 因为没时间布一个page+Mathjax页面了，所以强烈推荐大家安装这个chrome插件，安装即可浏览所有的LaTex公式：
+### 建议大家安装相关的chrome插件，安装即可浏览所有的LaTex公式：
 
-https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima
+* Github with Mathjax
+
+  https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima
+
+* Mermaid for Github安装方法:
+
+  - Clone repo:https://github.com/payfriendz/mermaid-chrome-extension
+  - Go to manage Chrome Extentions: chrome://extensions/
+  - Tick to enable Developer mode
+  - Load unpacked extension
+
+
+  - Select the repo folder
 
 参考课件发到了百度云盘上，需要者自行下载。
 
