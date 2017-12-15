@@ -33,7 +33,7 @@ $$f(x_1,x_2,...,x_n)=x^TAx$$
 
 1.对二次型
 
-$$f(x,y,z)=x^2-2xy+8xz+y^2+8yz+4z^2=\begin{pmatrix}x&y&z\end{pmatrix}\begin{pmatrix} 1&-1&4\\ -1&1 &4\\4&4&4\end{pmatrix}\begin{pmatrix}x\\y\\z\end{pmatrix}$$
+$$f(x,y,z)=x^2-2xy+8xz+y^2+8yz+4z^2= \begin{pmatrix} x&y&z \end{pmatrix} \begin{pmatrix} 1&-1&4\\ -1&1 &4\\4&4&4 \end{pmatrix} \begin{pmatrix}x\\y\\z \end{pmatrix}$$
 
 作变换
 
