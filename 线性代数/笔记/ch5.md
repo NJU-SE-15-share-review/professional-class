@@ -1,13 +1,17 @@
+# 第五章
 
-| Editor      | Time       |
-| ----------- | ---------- |
-| frostwing98 | 2017.12.15 |
-|             |            |
+| Editor      | Time    |
+| ----------- | ------- |
+| frostwing98 | 2017.12 |
+|             |         |
+
+
+
 [TOC]
 
-## Chapter 5
 
-### 5.1（1） 二次型及标准型
+
+## 5.1（1） 二次型及标准型
 
 #### 5.1.1 定义
 
@@ -28,20 +32,20 @@ $$f(x_1,x_2,...,x_n)=x^TAx$$
 中的对称矩阵A为二次型f的矩阵，A的秩称为二次型f的秩。
 
 
-
 #### 5.1.2 二次型的标准型
 
 1.对二次型
 
-$$f(x,y,z)=x^2-2xy+8xz+y^2+8yz+4z^2= \begin{pmatrix} x&y&z \end{pmatrix} \begin{pmatrix} 1&-1&4\\ -1&1 &4\\4&4&4 \end{pmatrix} \begin{pmatrix}x\\y\\z \end{pmatrix}$$
+$ f(x,y,z)=x^2-2xy+8xz+y^2+8yz+4z^2= \begin{pmatrix} x & y & z \end{pmatrix} \begin{pmatrix} 1 & -1 & 4 \\\ -1 & 1 & 4 \\\ 4 & 4 & 4  \end{pmatrix} \begin{pmatrix} x \\\ y \\\ z \end{pmatrix} $
+
 
 作变换
 
-$$\begin{equation}\begin{cases}x=\frac{1}{\sqrt6}x^`+\frac{1}{\sqrt2}y^`+\frac{1}{\sqrt3}z^`,\\y=\frac{1}{\sqrt6}x^`-\frac{1}{\sqrt2}y^`+\frac{1}{\sqrt3}z^`,\\z=\frac{2}{\sqrt6}x^`-\frac{1}{\sqrt3}z^`,\end{cases}\end{equation}$$
+$$ \begin{equation} \begin{cases} x= \frac{1}{\sqrt6} x^\`+ \frac{1}{\sqrt2}y^\`+\frac{1}{\sqrt3}z^\`,\\\y=\frac{1}{\sqrt6}x^\`- \frac{1}{\sqrt2}y^\`+\frac{1}{\sqrt3}z^\`,\\\z=\frac{2}{\sqrt6}x^\`-\frac{1}{\sqrt3}z^\`,\end{cases} \end{equation}$$
 
 有：
 
-$$f(x,y,z)=\begin{pmatrix}x^`&y^`&z^`\end{pmatrix}\begin{pmatrix}8&0&0\\0&2&0\\0&0&-4\end{pmatrix}\begin{pmatrix}x^`\\y^`\\z^`\end{pmatrix},即f(x^{'},y^{'},z^{'})=8x^{'2}+2y^{'2}-4z^{'2}$$
+$$f(x,y,z)=\begin{pmatrix}x^\`&y^\`&z^\`\end{pmatrix}\begin{pmatrix}8&0&0\\\0&2&0\\\0&0&-4\end{pmatrix}\begin{pmatrix}x^\`\\\y^\`\\\z^\`\end{pmatrix},即f(x^{'},y^{'},z^{'})=8x^{'2}+2y^{'2}-4z^{'2}$$
 
 
 
@@ -49,9 +53,9 @@ $$f(x,y,z)=\begin{pmatrix}x^`&y^`&z^`\end{pmatrix}\begin{pmatrix}8&0&0\\0&2&0\\0
 
 我们可以用矩阵表示这种变换：
 
-$$f(x,y,z)=\begin{pmatrix}x^`&y^`&z^`\end{pmatrix}P^T\begin{pmatrix}1&-1&4\\-1&1&4\\4&4&4\end{pmatrix}P\begin{pmatrix}x^`\\y^`\\z^`\end{pmatrix},其中P=\begin{pmatrix}\frac{1}{\sqrt6}&\frac{1}{\sqrt2}&\frac{1}{\sqrt3}\\\frac{1}{\sqrt6}&-\frac{1}{\sqrt2}&\frac{1}{\sqrt3}\\\frac{2}{\sqrt6}&0&-\frac{1}{\sqrt3}\end{pmatrix},\begin{pmatrix}x\\y\\z\end{pmatrix}=P\begin{pmatrix}x^`\\y^`\\z^`\end{pmatrix}$$
+$$f(x,y,z)= \begin{pmatrix}x^\`&y^\`&z^\` \end{pmatrix}P^T \begin{pmatrix}1&-1&4\\\ -1&1&4\\\4&4&4 \end{pmatrix}P \begin{pmatrix}x^\`\\\  y^\`\\\ z^\` \end{pmatrix},其中P= \begin{pmatrix}\frac{1}{\sqrt6}&\frac{1}{\sqrt2}&\frac{1}{\sqrt3}\\\ \frac{1}{\sqrt6}&-\frac{1}{\sqrt2}&\frac{1}{\sqrt3}\\\frac{2}{\sqrt6}&0&-\frac{1}{\sqrt3} \end{pmatrix}, \begin{pmatrix}x\\ y\\ z \end{pmatrix}=P \begin{pmatrix}x^\`\\\ y^\`\\\ z^\` \end{pmatrix}$$
 
-2.同一个二次型可以有不同的标准型变换，比如上式的P也可以用$Q=\begin{pmatrix}1&-3&-7\\0&1&1\\0&1&2\end{pmatrix}$进行变换，
+2.同一个二次型可以有不同的标准型变换，比如上式的P也可以用$Q=\begin{pmatrix}1&-3&-7\\\ 0&1&1\\\ 0&1&2\end{pmatrix}$进行变换，
 
 从而可以简化为一个新的标准型：$h(x^{''},y^{''},z^{''})=x^{''2}+4y^{''2}-16z^{''2}$
 
@@ -63,7 +67,7 @@ $$f(x,y,z)=\begin{pmatrix}x^`&y^`&z^`\end{pmatrix}P^T\begin{pmatrix}1&-1&4\\-1&1
 
 称如下变换为由$x_1,x_2...,x_n$到$y_1,y_2,...,y_n$的一个线性变换。
 
-$\begin{pmatrix}x_1\\x_2\\...\\x_n\end{pmatrix}=\begin{pmatrix}c_{11}&c_{12}...&...c_{nn}\\c_{21}&c_{22}...&...c_{2n}\\...&......&......\\c_{n1}&c_{n2}...&...c_{nn}\end{pmatrix}\begin{pmatrix}y_1\\y_2\\...\\y_n\end{pmatrix}$
+$\begin{pmatrix}x_1\\\ x_2\\\ ...\\\ x_n\end{pmatrix}=\begin{pmatrix}c_{11}&c_{12}...&...c_{nn}\\\ c_{21}&c_{22}...&...c_{2n}\\\ ...&......&......\\\ c_{n1}&c_{n2}...&...c_{nn}\end{pmatrix}\begin{pmatrix}y_1\\\ y_2\\\ ...\\\ y_n\end{pmatrix}$
 
 若线性变换的系数行列式，$\vert P\vert \neq0$那么这就是非退化线性变换～
 
@@ -112,11 +116,11 @@ $\begin{pmatrix}x_1\\x_2\\...\\x_n\end{pmatrix}=\begin{pmatrix}c_{11}&c_{12}...&
 >
 > 1.化出实二次型的矩阵
 >
-> $$f(x)=x^TAx,A=\begin{pmatrix}0&1&1\\1&0&1\\1&-1&0\end{pmatrix}$$
+> $$f(x)=x^TAx,A=\begin{pmatrix}0&1&1\\\ 1&0&1\\\ 1&-1&0\end{pmatrix}$$
 >
 > 2.求A的特征值：
 >
-> $$\vert \lambda E-A \vert=\left|\begin{array}\lambda-1&1&-4\\1&\lambda-1&-4\\-4&-4&\lambda+4\end{array}\right|=(\lambda-2)(\lambda-4)(\lambda+8)=0$$
+> $$\vert \lambda E-A \vert=\left|\begin{array}\lambda-1&1&-4\\\ 1&\lambda-1&-4\\\ -4&-4&\lambda+4\end{array}\right|=(\lambda-2)(\lambda-4)(\lambda+8)=0$$
 >
 > 得特征值为$\lambda=1(二重),-2$.
 >
@@ -128,7 +132,7 @@ $\begin{pmatrix}x_1\\x_2\\...\\x_n\end{pmatrix}=\begin{pmatrix}c_{11}&c_{12}...&
 >
 > 4.组合特征向量为新矩阵，对应对角矩阵的对应位置是对应的特征向量：
 >
-> $P=(\eta_1,\eta_2,\eta_3)=\begin{pmatrix}\frac{1}{\sqrt2}&\frac{1}{\sqrt6}&\frac{1}{\sqrt3}\\\frac{1}{\sqrt2}&-\frac{1}{\sqrt6}&\frac{1}{\sqrt3}\\0&\frac{2}{\sqrt6}&\frac{1}{\sqrt3}\end{pmatrix}$
+> $P=(\eta_1,\eta_2,\eta_3)=\begin{pmatrix}\frac{1}{\sqrt2}&\frac{1}{\sqrt6}&\frac{1}{\sqrt3}\\\ \frac{1}{\sqrt2}&-\frac{1}{\sqrt6}&\frac{1}{\sqrt3}\\\ 0&\frac{2}{\sqrt6}&\frac{1}{\sqrt3}\end{pmatrix}$
 >
 > 有$P^TP=E,P^TAP=diag(1,1,-2)$
 >
@@ -140,13 +144,13 @@ $\begin{pmatrix}x_1\\x_2\\...\\x_n\end{pmatrix}=\begin{pmatrix}c_{11}&c_{12}...&
 
 就是把式子配成全平方项，如：
 
-$f(x_1,x_2,x_3)=x_1^2-2x_1x_2+8x_1x_3+x_2^2+8x_2x_3-4x_3^2\\=(x_1-x_2+4x_3)^2+16x_2x_3-20x_3^2\\=(x_1-x_2+4x_3)^2-20(x_3-0.4x_2)^2+3.2x_2^2$
+$f(x_1,x_2,x_3)=x_1^2-2x_1x_2+8x_1x_3+x_2^2+8x_2x_3-4x_3^2\\\ =(x_1-x_2+4x_3)^2+16x_2x_3-20x_3^2\\\ =(x_1-x_2+4x_3)^2-20(x_3-0.4x_2)^2+3.2x_2^2$
 
 **0x03合同变换法**
 
-原理：对$B=\begin{pmatrix}A\\E\end{pmatrix}$进行初等列变换，从而变成$\begin{pmatrix}\Lambda\\P\end{pmatrix}=\begin{pmatrix}P^T& \\ &E\end{pmatrix}\begin{pmatrix}A\\E\end{pmatrix}P=\begin{pmatrix}P^TAP\\P\end{pmatrix}$
+原理：对$B=\begin{pmatrix}A\\\ E\end{pmatrix}$进行初等列变换，从而变成$\begin{pmatrix}\Lambda\\\ P\end{pmatrix}=\begin{pmatrix}P^T& \\\   &E\end{pmatrix}\begin{pmatrix}A\\\ E\end{pmatrix}P=\begin{pmatrix}P^TAP\\\ P\end{pmatrix}$
 
-也就是用之前化矩阵的方式把$\begin{pmatrix}A\\E\end{pmatrix}$变成$\begin{pmatrix}\Lambda\\P\end{pmatrix}$
+也就是用之前化矩阵的方式把$\begin{pmatrix}A\\\ E\end{pmatrix}$变成$\begin{pmatrix}\Lambda\\\ P\end{pmatrix}$
 
 比如：
 
@@ -154,19 +158,19 @@ $$f(x_1,x_2,x_3)=x_1^2-2x_1x_2+8x_1x_3+x_2^2+8x_2x_3-4x_3^2$$
 
 矩阵形式：
 
-$$f(x)=x^TAx,A=\begin{pmatrix}1&-1&4\\-1&1&4\\4&4&-4\end{pmatrix},x=\begin{pmatrix}x_1\\x_2\\x_3\end{pmatrix}$$
+$$f(x)=x^TAx,A=\begin{pmatrix}1&-1&4\\\ -1&1&4\\\ 4&4&-4\end{pmatrix},x=\begin{pmatrix}x_1\\\ x_2\\\ x_3\end{pmatrix}$$
 
 化为
 
-$$\begin{pmatrix}1&-1&4\\-1&1&4\\4&4&-4\\ & & \\1&0&0\\0&1&0\\0&0&1\end{pmatrix}\Rightarrow\begin{pmatrix}1&0&0\\0&-4&0\\0&0&16\\ & & \\1&-3&5\\0&1&-3\\0&1&-2\end{pmatrix}$$
+$$\begin{pmatrix}1&-1&4\\\ -1&1&4\\\ 4&4&-4\\\  & & \\\ 1&0&0\\\ 0&1&0\\\ 0&0&1\end{pmatrix}\Rightarrow\begin{pmatrix}1&0&0\\\ 0&-4&0\\\ 0&0&16\\\  & & \\\ 1&-3&5\\\ 0&1&-3\\\ 0&1&-2\end{pmatrix}$$
 
-$$\begin{equation}\begin{cases}x_1=y_1-3y_2+5y_3\\x_2=y_2-3y_3\\x_3=y_2-2y_3\end{cases}\end{equation}$$
+$$\begin{equation}\begin{cases}x_1=y_1-3y_2+5y_3\\\ x_2=y_2-3y_3\\\ x_3=y_2-2y_3\end{cases}\end{equation}$$
 
 $$g(y_1,y_2,y_3)=y_1^2-4y_2^2+16y_3^2$$
 
 
 
-### 5.1（2）二次型的规范形 
+## 5.1（2）二次型的规范形 
 
 规范形——标准形中最简单且唯一的形式。
 
@@ -212,7 +216,9 @@ p为原二次型的正惯性指数，r-p是负惯性指数。
 >
 > 当然也有更加简单的办法：求二次型系数矩阵，把特征值求出来，不就相当于化对角矩阵了么？直接数正、负特征值的个数。
 
-### 5.2 正定二次型
+
+
+## 5.2 正定二次型
 
 化为标准型之后，如果当所有的变量不全为0时，函数大于0，那么就是正定二次型。
 
@@ -252,7 +258,7 @@ p为原二次型的正惯性指数，r-p是负惯性指数。
 
 EOF.
 
-$frostwing98,Dec~~15,2017$
+$frostwing98,Feb~~14,2017$
 
 
 
