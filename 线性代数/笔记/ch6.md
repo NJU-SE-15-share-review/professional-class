@@ -1,3 +1,7 @@
+| Editor      | Time       |
+| ----------- | ---------- |
+| frostwing98 | 2017.12.14 |
+|             |            |
 [TOC]
 
 ## Chapter 6 线性空间与线性变换
@@ -68,11 +72,11 @@ $$\beta_1+\beta_2=\beta_3,\beta_3*2=\beta_4$$
 
 * 线性空间的零元素是唯一的
 * 线性空间任一元素的负元是唯一的
-* **0，1，-1，$$\lambda$$**
+* **0，1，-1，$\lambda$**
   * 0x=0
   * (-1)x=-x
-  * $$\lambda$$0=0
-  * $$\lambda x=0 \Rightarrow \lambda =0 或者 x=0$$
+  * $\lambda​$0=0
+  * $\lambda x=0 \Rightarrow \lambda =0 或者 x=0$
 
 ### 6.2 线性空间的基、维数与坐标
 
@@ -80,7 +84,7 @@ $$\beta_1+\beta_2=\beta_3,\beta_3*2=\beta_4$$
 
 **Definition6.2.1 线性相关与线性无关**：
 
-对线性空间 V(K)，$$\alpha_1,\alpha_2...\alpha_m$$是其中的一组向量，如果存在一组不为零的数$$s.t. \sum k_i\alpha_i=0$$那么线性相关，否则无关。
+对线性空间 V(K)，$\alpha_1,\alpha_2...\alpha_m$是其中的一组向量，如果存在一组不为零的数$s.t. \sum k_i\alpha_i=0$那么线性相关，否则无关。
 
 **Definition 6.2.2 维数**
 
@@ -92,3 +96,7 @@ $$\beta_1+\beta_2=\beta_3,\beta_3*2=\beta_4$$
 
 
 
+
+
+
+$frostwing98,Dec~~14,2017$
