@@ -74,6 +74,90 @@ graph TD
 
 #### 4.0.2 Thread Tree 线索树
 
+为了充分利用节点中的空域，我们加入了前驱或者后继的运算。
+
+一个节点中现在加入了这些参数中，每个节点有如下域：
+
+leftchild，leftthread，data,rightthread,rightchild
+
+$leftThread= \begin{cases} 0:leftchild指向左子女 \\\ 1:leftchild指向前驱 \end{cases}$
+
+$rightThread= \begin{cases} 0:rightchild指向右子女 \\\ 1:rightchild指向后继 \end{cases}$
+
+构造中序线索树的方法：相当于中序遍历，要填充左空域和右空域的前驱指针和后继指针，所以除了流动的指针p以外还要加一个pre指针，总是指向遍历指针p的中序前驱节点。
+
+sample code：
+
+```c++
+//Thread Tree
+//Create inorder threadTree:
+void Inthread(threadNode<T> * T)
+{ 
+	stack <threadNode <T> *> s (10)
+	ThreadNode <T> * p = T ; ThreadNode <T> * pre = NULL;
+	for ( ; ; )
+    {
+    while (p!=NULL)
+		{ s.push(p); p = p ->leftchild; }
+	if (!s.IsEmpty( ))
+	{  
+     	p = s.pop;
+		if (pre != NULL)
+		{
+    		if (pre ->rightchild = = NULL)
+        	{
+        		pre ->rightchild = p; pre ->rightthread = 1;
+        	}
+			if ( p -> leftchild = = NULL)
+			{
+        		p -> leftchild = pre ; p ->leftthread = 1; 
+        	}
+		}
+		pre = p ; p = p -> rightchild ;
+		}
+	else return;
+	}//for
+}
+```
+
+ #### 4.0.2Huffman Tree
+
+增长树的概念：对原来的二叉树中degree=1的节点，增加一个空树叶。
+
+对原来的二叉树中的树叶，增加两个空树叶
+
+```mermaid
+
+graph TD;
+1((1))-->2((2));
+1-->3((3));
+2-->4((4));
+2-->5((N/A));
+3-->6((6));
+3-->7((7));
+6-->8((N/A));
+6-->9((9));
+
+a((1))-->b((2));
+a((1))-->c((3));
+b((2))-->d((4));
+b-->x[add];
+d-->y[add];
+d-->z[add];
+c-->f((6));
+c-->g((7));
+f-->p[add];
+f-->i((9));
+i-->r[add];
+i-->q[add];
+g-->l[add];
+g-->ll[add];
+```
+
+> 垃圾mermaid……不能画空节点只好把写着N/A或者NULL的节点作为空节点了
+
+
+
 
 
 ### 4.1 Binary Search Tree
