@@ -59,7 +59,9 @@ professional-class
 ## 打发广告 
 [wz's blog](http://blog.csdn.net/qq_33230935)
 wz是这个仓库的创始人之一，将自己非常简陋的课堂笔记传到了这个blog上
-
+[frostwing98's blog](http://blog.csdn.net/qq_37820590/)
+[frostwing98's personal website](http://www.frostwing98.com)
+frostwing98是这个项目16级的负责人之一，从今年3月份开始将自己的课堂笔记与比赛回顾分享在这两个网站上
 
 ## 说明
 部分笔记使用Markdown编写，并使用Mathjax与Mermaid渲染公式与图表。
