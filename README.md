@@ -66,7 +66,8 @@ frostwing98是这个项目16级的负责人之一，从今年3月份开始将自
 Cleveland是跟着大佬摸鱼的鶸。跟风推广博客1/1，然而荒废已久（。如果写的话大概会写函数式相关的东西
 
 * [calabash_boy's blog](http://blog.csdn.net/calabash_boy)
-* calabash_boy's site:暂时没买到好的域名…………
+* calabash_boy's site:暂时没买到好的域名…………（无限期）借用另外一个好基友的域名，就不po了。
+
 calabash_boy是上边frostwing98的基友，主攻ACM竞赛及相关竞赛，目前有超过一百篇题目和专题讲解发表在上面的博客上，有需求（包括但不限于题目求解）欢迎私信
 
 ## 说明
