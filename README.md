@@ -56,6 +56,11 @@ professional-class
 
 欢迎更多同学的加入。
 
+|仓库负责人|
+|---|
+|万众(2017)|
+|杨宇清(2018)|
+
 ## 打发广告 
 [wz's blog](http://blog.csdn.net/qq_33230935)
 
