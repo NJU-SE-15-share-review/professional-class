@@ -6,6 +6,7 @@
 # n  mean stand-variance  min    max
 # 25 7.73 0.77           6.17   9.78
 
+from __future__ import print_function
 import numpy as np
 from scipy.stats import t
 
@@ -22,4 +23,4 @@ class Solution():
 
 if __name__ == '__main__':
     S = Solution()
-    print S.solve()
+    print(S.solve())

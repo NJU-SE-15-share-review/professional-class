@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 
 # 完成函数solve，判断传入的整数列表A中的数字是否是素数，并将所有的素数保存到另一个列表中并返回。
+from __future__ import print_function
 import numpy as np
 
 class Solution():
@@ -28,4 +29,4 @@ class Solution():
 if __name__ == '__main__':
     A = [23, 45, 76, 67, 17]
     S = Solution()
-    print S.solve(A)
+    print(S.solve(A))

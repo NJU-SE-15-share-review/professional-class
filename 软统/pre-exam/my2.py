@@ -1,3 +1,4 @@
+from __future__ import print_function
 import csv
 import urllib
 import pandas as pd
@@ -39,7 +40,7 @@ class Solution():
         std_lower = 31 * var / chi2.isf(0.05, 31)
         std_upper = 31 * var / chi2.isf(0.95, 31)
         result = [[mean_lower, mean_upper], [std_lower, std_upper]]
-        print result
+        print(result)
         return result
 
 Solution().solve()

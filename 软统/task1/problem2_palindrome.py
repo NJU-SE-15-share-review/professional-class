@@ -2,6 +2,7 @@
 """
 log api example: log('output is: ' + str(output))
 """
+from __future__ import print_function
 # 对于一个包含一系列数字字符串的列表，寻找其中的回文串存入一个列表中并返回
 
 
@@ -23,4 +24,4 @@ class Solution():
         return True
 
 A = ['123', '232', '4556554', '12123', '3443','1314131']
-print Solution().solve(A)
+print(Solution().solve(A))

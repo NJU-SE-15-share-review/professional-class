@@ -2,6 +2,7 @@
 """
 log api example: log('output is: ' + str(output))
 """
+from __future__ import print_function
 from scipy.stats import t
 import math
 
@@ -16,4 +17,4 @@ class Solution():
         t_value = t.isf(0.05, n - 1)
         return [round(n-1, 2), round(stat_value, 2), not math.fabs(stat_value) >= t_value]
 
-print Solution().solve()
+print(Solution().solve())

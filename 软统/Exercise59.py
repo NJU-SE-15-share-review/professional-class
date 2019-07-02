@@ -2,6 +2,7 @@
 
 # 对于一个包含一系列数字字符串的列表，寻找其中的回文串存入一个列表中并返回
 
+from __future__ import print_function
 class Solution():
     def solve(self, A):
         # use isPalindrom function to check if the string is palindrome or not
@@ -23,4 +24,4 @@ class Solution():
 if __name__ == '__main__':
     A = ['123', '232', '4556554', '12123', '3443', '1314131']
     S = Solution()
-    print S.solve(A)
+    print(S.solve(A))
