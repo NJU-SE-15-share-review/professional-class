@@ -12,8 +12,9 @@
 #       Total               150     150     300
 
 
+from __future__ import print_function
 class Solution():
     def solve(self):
         return 70*150/300
 
-print Solution().solve()
+print(Solution().solve())

@@ -2,6 +2,7 @@
 
 
 
+from __future__ import print_function
 from scipy.stats import chi2
 
 
@@ -20,4 +21,4 @@ class Solution():
 
 if __name__ == '__main__':
     S = Solution()
-    print S.solve()
+    print(S.solve())

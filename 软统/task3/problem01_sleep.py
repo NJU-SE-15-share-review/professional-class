@@ -2,6 +2,7 @@
 """
 log api example: log('output is: ' + str(output))
 """
+from __future__ import print_function
 from scipy.stats import norm
 import math
 
@@ -17,4 +18,4 @@ class Solution:
         return [avg - delta, avg + delta]
 
 
-print Solution().solve()
+print(Solution().solve())

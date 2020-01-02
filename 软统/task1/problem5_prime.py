@@ -2,6 +2,7 @@
 """
 log api example: log('output is: ' + str(output))
 """
+from __future__ import print_function
 import math
 
 class Solution():
@@ -19,4 +20,4 @@ class Solution():
                 return False
         return True
 
-print Solution().solve()
+print(Solution().solve())

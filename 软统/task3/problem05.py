@@ -2,6 +2,7 @@
 """
 log api example: log('output is: ' + str(output))
 """
+from __future__ import print_function
 # A group of researchers are interested in the possible effects of distracting stimuli during eating,
 # such as an increase or decrease in the amount of food consumption.
 # To test this hypothesis, they monitored food intake for a group of 44 patients who were randomised into two equal groups.
@@ -28,5 +29,5 @@ class Solution():
 		t_value = t.isf(0.05, n1 + n2 - 2)
 		return [min(n1 - 1, n2 - 1), -round(stat_value, 2), not stat_value <= -t_value]
 
-print Solution().solve()
+print(Solution().solve())
 

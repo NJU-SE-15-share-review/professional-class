@@ -2,6 +2,7 @@
 """
 log api example: log('output is: ' + str(output))
 """
+from __future__ import print_function
 # Is there strong evidence of global warming?
 # Let's consider a small scale example, ' \
 #    'comparing how temperatures have changed is the US from 1968 to 2008. ' \
@@ -22,4 +23,4 @@ class Solution():
         stat_value = mean / (std / math.sqrt(n))
         return [round(n - 1, 2), round(stat_value, 2), not stat_value <= -t_value]
 
-print Solution().solve()
+print(Solution().solve())

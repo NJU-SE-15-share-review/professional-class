@@ -1,3 +1,4 @@
+from __future__ import print_function
 import math
 
 
@@ -6,4 +7,4 @@ class Solution():
 
         return int(-1 * math.log(0.02, math.e)) + 1
 
-print Solution().solve()
+print(Solution().solve())

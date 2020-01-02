@@ -7,6 +7,7 @@
 # Do these data provide convincing evidence that the average food intake is different for the patients in the treatment group? Assume the conditions for inference are satisfied.
 #  Null hypothesis is H0: u_t - u_c = 0, alpha is 0.05
 
+from __future__ import print_function
 import numpy as np
 from scipy.stats import t
 
@@ -27,4 +28,4 @@ class Solution():
 
 if __name__ == '__main__':
     S = Solution()
-    print S.solve()
+    print(S.solve())
