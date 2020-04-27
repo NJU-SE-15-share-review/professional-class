@@ -64,7 +64,8 @@ professional-class
 ## 打发广告 
 [wz's blog](http://blog.csdn.net/qq_33230935)
 
-wz是这个仓库的创始人之一，将自己非常简陋的课堂笔记传到了这个blog上
+wz是这个仓库的创始人之一，将自己非常简陋的课堂笔记传到了这个blog上。
+有需要微软内推的同学，可以在求职季，将英文简历，姓名，电话，全职或实习以及想去的office（默认苏州O365）发至zhowa[AT]microsoft[DOT]com。
 
 [frostwing98's blog](http://blog.csdn.net/qq_37820590/)
 
