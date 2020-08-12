@@ -2,6 +2,7 @@
 """
 log api example: log('output is: ' + str(output))
 """
+from __future__ import print_function
 
 
 # College Grad?	Yes	No	Total
@@ -33,4 +34,4 @@ class Solution():
     def getTij(self, i, j):
         return 1.0 * self.n_i[i] * self.n_j[j] / self.total
 
-print Solution().solve()
+print(Solution().solve())

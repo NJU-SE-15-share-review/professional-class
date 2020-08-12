@@ -3,6 +3,7 @@
 # A 95% confidence interval for a population mean, u, is given as (18.985, 21.015).
 # This confidence interval is based on a simple random samples of 36 observations. Calculate the sample mean and standard deviation.
 # Assume that all conditions necessary for inference are satisfied. Use the t-distribution in any calculations.
+from __future__ import print_function
 import numpy as np
 from scipy.stats import t
 
@@ -19,5 +20,5 @@ class Solution():
 
 if __name__ == '__main__':
     S = Solution()
-    print S.solve()
+    print(S.solve())
 

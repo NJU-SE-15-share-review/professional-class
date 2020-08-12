@@ -1,3 +1,4 @@
+from __future__ import print_function
 import csv
 import urllib
 import numpy as np
@@ -35,4 +36,4 @@ class Solution():
         else:
             return "NO"
 
-print Solution().solve()
+print(Solution().solve())

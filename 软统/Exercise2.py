@@ -1,4 +1,5 @@
 #-*- coding:utf-8 -*-
+from __future__ import print_function
 import random
 
 
@@ -16,4 +17,4 @@ def MontyCarlo():
 if __name__ == '__main__':
     pi = MontyCarlo()
     #print out the result
-    print pi
+    print(pi)

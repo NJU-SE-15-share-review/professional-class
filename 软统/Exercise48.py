@@ -9,6 +9,7 @@
 # Oppose 	        180 	126 	306
 # Do not know 	    104 	131 	235
 # Total 	        438 	389 	827
+from __future__ import print_function
 import numpy as np
 from scipy.stats import chi2
 
@@ -34,4 +35,4 @@ class Solution():
             return [2, round(x2, 2), True]
 
 
-print Solution().solve()
+print(Solution().solve())

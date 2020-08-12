@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 
 # 创建一个ndarray数组对象，输入一组100以内的整数，数组shape为4*4，将数组中所有元素的总和、每行的平均值以及每列的平均值共9个数存入一个列表中，并返回该列表。
+from __future__ import print_function
 import numpy as np
 
 class Solution():
@@ -49,4 +50,4 @@ class Solution():
 if __name__ == '__main__':
     A=np.array([[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]])
     S=Solution()
-    print S.solve(A)
+    print(S.solve(A))
