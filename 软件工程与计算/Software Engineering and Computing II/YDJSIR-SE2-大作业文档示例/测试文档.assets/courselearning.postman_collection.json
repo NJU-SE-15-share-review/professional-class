@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "acf57a39-d415-4a93-8001-815d5cc235e4",
+		"name": "courselearning",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "getPost",
+					"item": [
+						{
+							"name": "getPost-1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/post/1?postId=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"post",
+										"1"
+									],
+									"query": [
+										{
+											"key": "postId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "getPosts",
+					"item": [
+						{
+							"name": "getPosts-1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/post/1/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"post",
+										"1",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "getPostsByRepliedTime",
+					"item": [
+						{
+							"name": "getPostsByRepliedTime-1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/post/r/1/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"post",
+										"r",
+										"1",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "createPost",
+					"item": [
+						{
+							"name": "createPost-1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/post/1/create?uid=1&title=帖子测试标题&content=帖子测试内容",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"post",
+										"1",
+										"create"
+									],
+									"query": [
+										{
+											"key": "uid",
+											"value": "1"
+										},
+										{
+											"key": "title",
+											"value": "帖子测试标题"
+										},
+										{
+											"key": "content",
+											"value": "帖子测试内容"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "createComment",
+					"item": [
+						{
+							"name": "createComment-1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/comment/1/1/create?uid=1&content=测试评论内容&replied_commentId=0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"comment",
+										"1",
+										"1",
+										"create"
+									],
+									"query": [
+										{
+											"key": "uid",
+											"value": "1"
+										},
+										{
+											"key": "content",
+											"value": "测试评论内容"
+										},
+										{
+											"key": "replied_commentId",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "getComments",
+					"item": [
+						{
+							"name": "getComments-1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/comment/1/1/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"comment",
+										"1",
+										"1",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "notification",
+			"item": [
+				{
+					"name": "getNotifications",
+					"item": [
+						{
+							"name": "getNotifications-1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/notification/1?uid=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"notification",
+										"1"
+									],
+									"query": [
+										{
+											"key": "uid",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "setRead",
+					"item": [
+						{
+							"name": "setRead-1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/notification/setRead/1?uid=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"notification",
+										"setRead",
+										"1"
+									],
+									"query": [
+										{
+											"key": "uid",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
