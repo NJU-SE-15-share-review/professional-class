@@ -149,3 +149,7 @@ calabash_boy是上边frostwing98的基友，以及wz的超级迷弟，饥渴等�
 #### [YDJSIR's blog](https://www.ydjsir.com.cn/)
 
 只能保证将自己的复习资料全部push到库里面供大家共享的19级萌新YDJSIR。
+
+#### [EagleBear2002's blog](https://eaglebear2002.github.io/)
+
+这里的课程笔记、技术文档和学习日志长期更新，对 ACM 有兴趣的小朋友可私聊 [EagleBear2002](https://github.com/EagleBear2002)。
