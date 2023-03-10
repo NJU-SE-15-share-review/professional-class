@@ -1,16 +1,10 @@
-# `金陵大学自学学院`专业课资料整理
+# 由于LFS配额超支，本仓库可能已经无法继续贡献。
 
  <a href="https://github.com/NJU-SE-15-share-review/professional-class/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/NJU-SE-15-share-review/professional-class"></a> <a href="https://github.com/NJU-SE-15-share-review/professional-class/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/NJU-SE-15-share-review/professional-class"></a> <a href="https://github.com/NJU-SE-15-share-review/professional-class/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/NJU-SE-15-share-review/professional-class"></a> <a href="https://github.com/NJU-SE-15-share-review/professional-class"><img alt="GitHub license" src="https://img.shields.io/github/license/NJU-SE-15-share-review/professional-class"></a>
 
 > `professional-class` - `专业课`
 >
 > 这是洲神提出的想法，航哥取的仓库名字
->
-> ## 欢迎加入专业课资料分享群！
->
-> |  群号码   |                       二维码                        |      加群暗号      |
-> | :-------: | :-------------------------------------------------: | :----------------: |
-> | 671139455 | ![入群二维码](https://oss.ydjsir.com.cn/img/professional-class.png) | ==我要专业课资料== |
 >
 > ## 友情链接
 >
